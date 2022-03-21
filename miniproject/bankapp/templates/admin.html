@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .container-fluid{
+            background-image:url('https://media.istockphoto.com/photos/person-holds-a-smartphone-with-mobile-banking-icons-projection-picture-id1304484797?b=1&k=20&m=1304484797&s=170667a&w=0&h=Z8RFNCQoyUz1lXq9eZK55DuwA8TPRcPcIAJDR7HDjpk=') ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        
+        }
+        .container{
+            display: grid;
+            /* background-color: lightskyblue; */
+            width: 100%;
+             height: 200px;
+             
+            
+            /* padding-left: 70px; */
+            /* padding-top: 50px; */
+        }
+        li{
+            color: whitesmoke;
+            font-size: medium;
+        }
+        .container1{
+            margin-right: 500px;
+        }
+        img{
+            margin-top: 100px;
+        }
+        h1{
+            color: darkred;
+            /* font-size: larger; */
+            font-style: italic; 
+            margin-top: 50px;
+            margin-left: 100px;
+            padding-left: 150px;
+            
+        }
+        h4{
+            color: white;
+            margin-left: 250px;
+            justify-content: right;
+            padding-top: 10px;
+            padding-left:650px ;
+        }
+        #div3{
+            /* background-color: aquamarine; */
+            margin-top: 100px;
+            margin-left: 10px;
+           margin-right: 400px;
+           color: whitesmoke;
+           font-size: 50px;
+        }
+        .container-fluid1{
+            background-image: linear-gradient(lightskyblue,lightyellow,lavender);
+           /* margin-left: 200px; */
+           opacity: 0.8;
+           margin-top: 50px;
+           padding:50px ;
+           width: 100%;
+        
+        }
+    </style>
+</head>
+<body>
+     
+    <div class="container-fluid">
+    <div class="container1" >
+        <div class="row">
+            <div class="col-xs-3 col-lg-3">
+            <div id="div1" style="width: 200px;height: 700px;background-color: rgba(35, 48, 51, 0.897);border-style:solid ; opacity: 0.8; padding-top: 40px;padding-left: 20px;">
+                <ul>
+                    <br>
+                    <br>
+                    <br>
+
+                    <a href="https://shajilc.w3spaces.com/targets.html" style="text-decoration: none;"><li>targets</li></a>
+                    <br>
+                    <a href="https://shajilc.w3spaces.com/notifications.html" style="text-decoration: none;"> <li>notifications</li></a>
+                    <br>
+                    <a href="https://shajilc.w3spaces.com/staffs.html" style="text-decoration: none;"><li>staffs</li></a>
+                    <br>
+                    <a href="https://shajilc.w3spaces.com/reports.html" style="text-decoration: none;"><li>reports</li></a>
+                    <br>
+                    <a href="https://shajilc.w3spaces.com/schemes.html" style="text-decoration: none;"> <li>schemes</li></a>
+                    <br>
+                    <a href="https://shajilc.w3spaces.com/customers.html" style="text-decoration: none;"><li>customers</li></a>
+                </ul>
+                </div>
+            </div> 
+     
+    
+    
+    
+            <div class="col-xs-9 col-lg-9">
+                <a href="https://shajilc.w3spaces.com/login.html" style="text-decoration: none;"> <h4> logout. </h4></a>
+               <h1>Welcome TO The Joy OF Banking....</h1>
+               <!-- <div id="div3" class="col-xs-12 col-lg-12">
+                <p>What banking means?
+                    Banking is defined as the business activity of accepting and safeguarding money owned by other individuals and entities, and then lending out this money in order to conduct economic activities such as making profit or simply covering operating expenses.</p>
+            </div> -->
+                <!-- <img src="{% static 'images/admin log.jpg' %}" width="300px"> -->
+                <div class="container-fluid1">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12">
+                            <p>What banking means?
+                                Banking is defined as the business activity of accepting and safeguarding money owned by other individuals and entities, and then lending out this money in order to conduct economic activities such as making profit or simply covering operating expenses.</p>  
+                        </div>
+                       
+                
+                    </div>
+                </div>
+                <div class="container-fluid1">
+                    <div class="row">
+                        <!-- <div class="col-xs-12 col-lg-12"> -->
+                            <p> What is banking and types of banking?
+                                Key Takeaways. A bank is a financial institution licensed to receive deposits and make loans. There are several types of banks including retail, commercial, and investment banks. In most countries, banks are regulated by the national government or central bank.</p>
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>    
+</body>
+</html>
