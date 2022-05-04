@@ -11,3 +11,11 @@ def index2(request):
 
 def index3(request):
      return render(request, 'target.html')
+
+
+def index4(request):
+     return render(request,'dupli.html')
+
+
+def index5(request):
+     return render(request,'manager.html')     
