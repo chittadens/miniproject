@@ -18,4 +18,11 @@ def index4(request):
 
 
 def index5(request):
-     return render(request,'manager.html')     
+     return render(request,'manager.html') 
+
+
+def index6(request):
+     return render(request,'adm.html')
+
+
+         
