@@ -2,11 +2,14 @@ from django.urls import path
 from .import views
 
 urlpatterns = [
-    path('index1/', views.index1,name="adam"),
-    path('index2/', views.index2,name="emy"),
-    path('index3/', views.index3,name="aby"),
+    path('', views.home,name="home"),
+    path('login/', views.login,name="login"),
+    path('admin/', views.admin,name="admin"),
+    path('target/', views.target,name="target"),
     path('index4/', views.index4),
-    path('index5/', views.index5,name="jack"),
-    path('index6/', views.index6),
+    path('manager/', views.manager,name="manager"),
+    path('customers/', views.customers,name="customer"),
+    path('index7/', views.index7,name="tom"),
+    path('table/', views.table),
 
 ]
