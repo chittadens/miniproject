@@ -20,8 +20,12 @@
             <td>{{ i.password}}</td>
             <td>{{ i.email}}</td>
             <td>{{ i.age}}</td>
+            <td> <button> <a href="/delete/{{ i.id }}"> delete</a></button></td>
+            <td> <button> <a href="/update/{{ i.id }}"> update</a></button></td>
         </tr>
+
         {% endfor %}
     </table>
+     <button><a href="{% url 'logout' %}" > logout</a></button>
 </body>
 </html>

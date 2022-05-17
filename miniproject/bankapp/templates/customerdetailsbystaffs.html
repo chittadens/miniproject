@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer details</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 200px;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault01">First name</label>
+            <input type="text" class="form-control" id="validationDefault01"  required>
+          </div>
+          <br>
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault02">Last name</label>
+            <input type="text" class="form-control" id="validationDefault02"  required>
+          </div>
+          <br>
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault02">contact number</label>
+            <input type="text" class="form-control" id="validationDefault02"  required>
+          </div>
+          <br>
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault02">email</label>
+            <input type="text" class="form-control" id="validationDefault02"  required>
+          </div>
+          <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">MALE</label>
+          </div>
+          <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">FEMALE</label>
+          </div>
+          <br>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationDefault03">City</label>
+            <input type="text" class="form-control" id="validationDefault03" required>
+          </div>
+          <br>
+          <div class="col-md-3 mb-3">
+            <label for="validationDefault04">State</label>
+            <select class="custom-select" id="validationDefault04" required>
+              <option selected disabled value="">Choose...</option>
+              <option>kerala</option>
+              <option>goa</option>
+              <option>karnataka</option>
+              <option>tn</option>
+            </select>
+          </div>
+          <br>
+          <div class="col-md-3 mb-3">
+            <label for="validationDefault05">Zip</label>
+            <input type="text" class="form-control" id="validationDefault05" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+            <label class="form-check-label" for="invalidCheck2">
+              Agree to terms and conditions
+            </label>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+</body>
+</html>

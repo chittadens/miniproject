@@ -10,6 +10,10 @@ urlpatterns = [
     path('manager/', views.manager,name="manager"),
     path('customers/', views.customers,name="customer"),
     path('index7/', views.index7,name="tom"),
-    path('table/', views.table),
+    path('table/', views.table,name="table"),
+    path('delete/<int:id>', views.delete,name="delete"),
+    path('update/<int:id>', views.update,name="update"),
+    path('mammlogin/',views.mammlogin,name="maamlogin"),
+    path('logout/',views.logout,name="logout"),
 
 ]
