@@ -18,6 +18,10 @@ def forgot(request):
     return render(request, 'forgot.html')
 
 
+def registration(request):
+    return render(request, 'registration.html')
+
+
 def target(request):
      return render(request, 'target.html')
 

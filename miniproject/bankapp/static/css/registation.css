@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;0,800;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 960px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin-bottom: 40px !important;
+}
+.logo-img a img{
+    height: 60px; 
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.container{
+    max-width: 65% !important;
+    margin: auto;
+    background: #fff;
+    padding: 25px 30px !important;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    left: 0;
+    bottom: 0;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0 10px 0;
+    
+}
+form .user-details .input-box{
+    width: calc(100% / 2 - 35px);
+    margin-bottom: 20px;  
+}
+
+#phonenumber{
+    width: 170px;
+    margin-bottom: 2px;
+    
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.input-box i{
+    position: relative;
+    left:273px;
+    bottom:30px; 
+    visibility: hidden;
+}
+
+.input-box small{
+    visibility: hidden;
+    position: relative;
+    bottom: 0;
+    right: 40px;
+}
+
+.user-details .input-box input,select{
+   height: 35px;
+   width: 100%; 
+   outline: none;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   padding-left: 15px;
+   font-size: 16px;
+   border-bottom-width: 2px;
+   transition: all 0.3s ease;
+}
+.user-details .success input{
+    border-color: #2ecc71;
+}
+
+.user-details .error input{
+    border-color: #e74c3c;
+}
+.user-details .success .fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+.user-details .error .fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+.user-details .error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/* .user-details .input-box input,select:focus,
+.user-details .input-box input,select:valid{
+    border-color: #9b59b6;
+} */
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 0 0;
+    justify-content: space-between;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .submit-session{
+    display: flex;
+   height: 45px;
+   margin-top: 30px; 
+   width: 100% !important;
+}
+form .submit-session .button1,.button2 {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;    
+}
+.button1, .button2{
+    margin-right:16px;
+    margin-left: 16px;
+    align-items: center;
+    
+}
+form .submit-session .button1:hover,
+form .submit-session .button2:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  
+}
+.text-center{
+    margin: 20px 0;
+    text-align: center;
+} 
+@media (max-width: 1150px){
+    .input-box i{
+        position: relative;
+        left:230px;
+        bottom:30px;
+    } 
+}
+@media (max-width: 1040px){
+    .input-box i{
+        position: relative;
+        left:200px;
+        bottom:30px;
+    } 
+}
+@media (max-width: 940px){
+    .input-box i{
+        position: relative;
+        left:150px;
+        bottom:30px;
+    } 
+}
+
+@media (max-width: 770px){
+    .container{
+        max-width: 100%;
+    } 
+    form .user-details .input-box{
+        width: 100%;
+        margin-bottom: 20px;  
+    }
+    form .gender-details .category{
+        width: 100%; 
+    }
+    .container form .user-details{
+       max-height: 300px;
+       overflow-y: scroll; 
+    }
+    .user-details::-webkit-scrollbar{
+       width: 0; 
+    }
+    .input-box i{
+        position: relative;
+        left:320px;
+        bottom:30px; 
+    }
+}
+@media (max-width: 645px){
+    .input-box i{
+        position: relative;
+        left:230px;
+        bottom:30px;
+    } 
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
