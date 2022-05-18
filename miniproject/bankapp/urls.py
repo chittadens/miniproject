@@ -15,5 +15,6 @@ urlpatterns = [
     path('update/<int:id>', views.update,name="update"),
     path('mammlogin/',views.mammlogin,name="maamlogin"),
     path('logout/',views.logout,name="logout"),
+    path('home/forgot/',views.forgot,name="forgot"),
 
 ]

@@ -14,6 +14,10 @@ def admin(request):
     return render(request, 'admin.html')
 
 
+def forgot(request):
+    return render(request, 'forgot.html')
+
+
 def target(request):
      return render(request, 'target.html')
 
