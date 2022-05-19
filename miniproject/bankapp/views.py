@@ -6,8 +6,28 @@ def home(request):
      return render(request, 'home.html')
 
 
+def home1(request):
+     return render(request, 'home1.html')
+
+
 def login(request):
      return render(request, 'login.html')
+
+
+def stafflogin(request):
+     return render(request, 'stafflogin.html')
+
+
+def managerlogin(request):
+     return render(request, 'managerlogin.html')
+
+
+def asstmanagerlogin(request):
+     return render(request, 'asstmanagerlogin.html')
+
+
+def asstmanagerprofiles(request):
+     return render(request, 'asstmanagerprofiles.html')
 
 
 def admin(request):
@@ -18,24 +38,83 @@ def forgot(request):
     return render(request, 'forgot.html')
 
 
+def attendance(request):
+    return render(request, 'attendance.html')
+
+
 def registration(request):
     return render(request, 'registration.html')
 
 
-def target(request):
-     return render(request, 'target.html')
+def targets(request):
+     return render(request, 'targets.html')
+
+
+def staffs(request):
+     return render(request, 'staffs.html')
+
+
+def edit(request):
+     return render(request, 'edit.html')
+
+
+def managerprofiles(request):
+     return render(request, 'managerprofiles.html')
+
+
+def adminclerkprofile(request):
+     return render(request, 'adminclerkprofile.html')
+
+
+def staffprofile(request):
+     return render(request, 'staffprofile.html')
+
+def clerkprofile(request):
+     return render(request, 'clerkprofile.html')
+
+
+def adminmanager(request):
+     return render(request, 'adminmanager.html')
+
+
+def adasstmaprofile(request):
+     return render(request, 'ad asst ma profile.html')
 
 
 def index4(request):
      return render(request,'dupli.html')
 
 
-def manager(request):
-     return render(request,'manager.html') 
+def managerhome(request):
+     return render(request,'managerhome.html') 
+
+
+def managerstaff(request):
+     return render(request,'managerstaff.html') 
+
+
+def staffhome(request):
+     return render(request,'staffhome.html') 
 
 
 def customers(request):
      return render(request,'customers.html')
+
+
+def schemes(request):
+     return render(request,'schemes.html')
+
+
+def reports(request):
+     return render(request,'reports.html')
+
+
+def reset(request):
+     return render(request,'reset.html')
+
+
+def notifications(request):
+     return render(request,'notifications.html')
 
 
 def index7(request):
@@ -90,7 +169,23 @@ def mammlogin(request):
 def logout(request):
      request.session.flush()
      return redirect("maamlogin")
-        
+
+
+def maamprofile(request):
+     if 'xyz' in request.session:
+          current_user=request.session['xyz']
+          profile_details=Registration.objects.get(id=current_user)
+          return render(request, 'maamprofile.html',{'profile':profile_details})
+     return render(request,'mammlogin.html',{"message":"login your profile"}) 
+
+
+def maamproduct(request):
+     if request.method=='POST':
+          productname=request.POST['productname']
+          price=request.POST['price']
+          description=request.POST['description']
+          images=request.FILES['images']
+     return render(request,'maamproduct.html')    
 
  
          

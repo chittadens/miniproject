@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="icon" href="{% static 'images/logohub.png' %}">
+    <!-- <link rel="icon" href="{% static 'images/logohub.png' %}"> -->
     <link rel="stylesheet" href="{% static '/css/registation.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <!-- <script src="{% static '/javaScript/registration.js' %}"></script> -->
+    <style>
+        img{
+            width: 20px;
+        }
+    </style>
 
 </head>
 <body>
     <div class="logo-img">
-    <a href="{% url 'home' %}">
-        <img src="/static/images/reviewhublogos1.png" >
+    <a href="{% url 'home1' %}">
+        <img src="https://i.ibb.co/F4w2djR/back-arrow-2.png" >
     </a>
     </div>
     <div class="container">
@@ -27,15 +32,29 @@
         <form action="#" id="form" name="contact">
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Full name</span>
-                    <input type="text" placeholder="Enter your name" id="name">
+                    <span class="details">First name</span>
+                    <input type="text" placeholder="Enter your First name" id="name">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="input-box">
-                    <span class="details">Username</span>
-                    <input type="text" placeholder="Enter your username" id="username">
+                    <span class="details"> Last name</span>
+                    <input type="text" placeholder="Enter your lastname" id="lastname">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="input-box">
+                    <span class="details">Account Number</span>
+                    <input type="number" placeholder="Enter your Account number" id="accountnumber" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="input-box">
+                    <span class="details">Conform Account Number</span>
+                    <input type="number" placeholder="Conform your account number " id="reaccountnumber" >
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
@@ -517,12 +536,12 @@
                         <span class="gender">Prefer not to say</span>
                     </label>
                 </div>
-                <i class="fas fa-check-circle"></i>
+                <!-- <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
+                    <small>Error message</small> -->
             </div>
             <br>
-            <div class="form-check" >
+            <!-- <div class="form-check" >
                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                 <label class="form-check-label" for="form2Example3">
                   I agree all statements in <a href="#!">Terms of service</a>
@@ -530,12 +549,12 @@
               </div>
               <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
+                    <small>Error message</small> -->
             <div class="submit-session">
                 
-                <button type="reset" class="button1">Reset all</button>
+               <a href="{% url 'registration' %}"> <button type="reset" class="button1" style="color:white ;">Reset all </a></button>
                 <span></span>
-                <button type="submit" class="button2">Register</button>
+                <a href="{% url 'home' %}"></a><button type="submit" onclick=" return validation()" class="button2">Register</button>
               
             </div>
             <div class="text-center">
@@ -560,9 +579,14 @@
 
    
 <script>
+    function validation(){
+
+    
         const form = document.getElementById('form');
         const name = document.getElementById('name');
-        const username = document.getElementById('username');
+        const lastname = document.getElementById('lastname');
+        const accountnumber = document.getElementById('accountnumber');
+        const reaccountnumber = document.getElementById('reaccountnumber');
         const email = document.getElementById('email');
         const phonenumber = document.getElementById('phonenumber1');
         const nationality = document.getElementById('nationality');
@@ -590,7 +614,9 @@
         
         function checkInputs() {
             const nameValue = name.value.trim();
-            const usernameValue = username.value.trim();
+            const lastnameValue = lastname.value.trim();
+            const accountnumberValue = accountnumber.value.trim();
+            const reaccountnumberValue = reaccountnumber.value.trim();
             const emailValue = email.value.trim();
             const passwordValue = password.value.trim();
             const repasswordValue = repassword.value.trim();
@@ -605,11 +631,25 @@
                 setSuccessFor(name);
             }
 
-            if(usernameValue === '') {
-                setErrorFor(username, 'Username cannot be blank');
+            if(lastnameValue === '') {
+                setErrorFor(lastname, 'last name cannot be blank');
             } else {
-                setSuccessFor(username);
+                setSuccessFor(lastname);
             }
+            if(accountnumberValue === '') {
+                setErrorFor(accountnumber, 'account number cannot be blank');
+            } else {
+                setSuccessFor(accountnumber);
+            }
+            
+            if(reaccountnumberValue === '') {
+                setErrorFor(reaccountnumber, 'Re enter accountnumber');
+            } else if(accountnumberValue !== reaccountnumberValue) {
+                setErrorFor(reaccountnumber, 'account number does not match');
+            } else{
+                setSuccessFor(reaccountnumber);
+            }
+
         
             if(emailValue === '') {
                 setErrorFor(email, 'Email cannot be blank');
@@ -689,7 +729,7 @@
         }
 
        
-
+    }
       </script>
 
 

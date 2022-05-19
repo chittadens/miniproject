@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
 </head>
 <style>
     body{
-        background-image: url('https://media.istockphoto.com/photos/mobile-banking-network-picture-id827843530?k=20&m=827843530&s=612x612&w=0&h=XJKSVCfAYjubl0-cXyi1v3w_RU5cwRnkvIXiJ7rDle8=');
+        background-image: url('https://i.ibb.co/89t2ttQ/customerhome.jpg');
         /* background-color: lightgoldenrodyellow; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 </style>
 <body>
     <nav class="navbar navbar-light bg-primary">
-        <a class="navbar-brand" href="/bankapp/templates/admin.html"><img src="/bankapp/static/images/home logo.png" width="50px"></a>
+        <a class="navbar-brand" href="{% url 'admin' %}"><img src="https://i.ibb.co/g9YmTcD/home-logo.png" width="50px"></a>
         <form class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

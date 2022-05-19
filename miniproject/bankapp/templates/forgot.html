@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +12,13 @@
 
 </head>
 <body style="background-color: blanchedalmond;">
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="/bankapp/templates/home.html"><img src="/bankapp/static/images/home logo.png" width="50px" alt=""></a>
-      </nav>
+    <!-- <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="https://i.ibb.co/g9YmTcD/home-logo.png" width="50px" alt=""></a>
+      </nav> -->
         <br>
         <br>
         
-        <div class="login" style="height: 300px; width: 400px; border: 1px solid rgb(164, 157, 157); background-color: rgb(255, 255, 255); padding: 30px; border-radius: 25px; margin-left: 35%;" >
+        <div class="login" style="height: 300px; width: 400px; border: 1px solid rgb(164, 157, 157); background-color: rgb(255, 255, 255); padding: 30px; border-radius: 25px; margin-left: 35%; margin-top: 100px;" >
         <h5>Forget Password</h5>
         <br>
             <form>
@@ -30,7 +31,7 @@
           
             
            
-            <a href="/bankapp/templates/reset.html" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-block mb-4" style="background-color: #04aa6d;">Send code</button></a>
+            <a href="{% url 'reset' %}" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-block mb-4" style="background-color: #04aa6d;">Send code</button></a>
           
             
           </form>

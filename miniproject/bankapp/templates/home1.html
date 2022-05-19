@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,230 +6,130 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
   <style>
-    body{
-     background-image: url(/bankapp/static/images/home\ page.jpg);
-     background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            
+    h1,h4{
+      color: darkblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
-  
-        a:hover{
-          background-color: whitesmoke;
-        }
-        .nav-link1{
-          text-decoration: none;
-          color: whitesmoke;
-          
-        }
-        img{
-          position: relative;
-        }
-        .sub-menu-1{
-          display: none;
-        }
-        .sub-menu-1:hover{
-          background-color: darkslategray;
-          text-decoration: none;
-        }
-        .cl-1:hover {
-          background-color: dimgrey;
-        }
-        .cl-2:hover {
-          background-color: dimgrey;
-        }
-        .cl-3:hover {
-          background-color: dimgrey;
-        }
-        .cl-4:hover {
-          background-color: dimgrey;
-        }
-        .cl-5:hover {
-          background-color: dimgrey;
-        }
-        .cl-1:hover .sub-menu-1{
-          display: contents;
-          position: absolute;
-          background-color: lightsteelblue;
-          text-decoration: none;
-        }
-        .cl-5:hover .sub-menu-1{
-          display: contents;
-          position: absolute;
-          background-color: lightsteelblue;
-          text-decoration: none;
-        }
-        label{
-          color: whitesmoke;
-        }
-        .navbar-brand  h1{
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          font-size: 50PX;
-          color:whitesmoke;
-          
-        }
+    #div1{
+      background-color:lightblue ;
+    }
+    #div2{
+      background-color: lightblue ;
+    }
+    h3{
+      color: darkblue;
+      padding: 3px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+    #para{
+      font-size: medium;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    span{
+      color: darkblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 50px;
+    }
 
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-danger">
-    <a class="navbar-brand" href="#"><img src="/bankapp/static/images/logo2.jpg" width="50px" ></a>
-    <nav class="navbar navbar-light ">
-      <span class="navbar-brand  h1">XYZ BANKS</span>
-    </nav>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-       
-        
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search near banks" aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-2" style="width: 20px;height:500px ; border:darkolivegreen ;border-style:hidden ;padding-top: 100px;">
-        <ul class="ul-1">
-          <br>
-          <li class="cl-1"> Personel banking 
-          <div class="sub-menu-1">
-            <ul>
-              <li ><a href=""> accounts and deposits</a></li>
-              <br>
-              <li ><a href=""> loans</a></li>
-              <br>
-              <li ><a href=""> insurance</a></li>
-              <br>
-              <li ><a href=""> money transfer</a></li>
-              <br>
-            </ul>
-          </div>
-          
-          
-          
-          </li>
-          <br>
-          <li class="cl-2"> priority banking</li>
-          <br>
-          <li class="cl-3">net banking</li>
-          <br>
-          <li class="cl-4">business banking</li>
-          <br>
-          <li class="cl-5">online banking
-            <div  class="sub-menu-1">
-              <ul>
-                <li><a href=""> Login (existing user)</a></li>
-                <br>
-                <li> <a href="">New user registration </a></li>
-              </ul>
-
-            </div>
-          </li>
-        </ul>
-
-      </div>
-      <div class="col-5" style="padding-top:100px ;">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/bankapp/static/images/sc6.jpg" class="d-block w-100 "  alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/bankapp/static/images/scheme 2.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/bankapp/static/images/scheme 4.png" class="d-block w-100 " style="height:300px ;" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </button>
+    <div class="row">  
+      <div class="col-lg-12" style="background-image: url('https://i.ibb.co/jGySmfL/new-home.jpg'); background-size: cover; background-repeat: no-repeat; height:500px; width: 100%; ">
+        <div class="title" style="height: 50px; background: none;" >
+         <a href=""> <img src="https://i.ibb.co/YfW5T7N/banklogo.jpg"style="height: 50px; margin: 20px;" ></a>
+         <span class="navbar-brand  h1">XYZ BANKS</span>
+         <a href="{% url 'login' %}"><button type="button" class="btn btn-outline-dark"style="color:white; float: right;margin-top: 20px; margin-right: 10px; padding-left: 30px; padding-right: 30px; border-radius: 15px; border: 1px solid black;">Log in</button></a>               
         </div>
-      </div>
-      <div class="col-5" style="padding-top: 100px;">
-        <form action="" method="post">
-         
-          <div class="form-group row">
-          <label class="col-sm-2 col-form-label">USER NAME</label>
-              <input type="text" class="form-control col-sm-10" id="username">
-              <label for="" id="username_eror"></label>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">PASSWORD</label>
-              <input type="password" class="form-control col-sm-10" id="Password">
-              <label for="" id="password_error"></label>
-          </div>
-            <div align="center">
-              <button  type="submit" onclick="return validation()" class="btn btn-primary">Login</button>
-              <a href="/bankapp/templates/forgot.html"><button  type="submit" class="btn btn-secondary">forgot password </a></button>
-              <button type="button" class="btn btn-link">Clear</button>
-
-            </div>
-            
-          
-        </form>
+        <center style="margin-top: 110px; color: white;">
+          <h1>XYZ Banks welcomes you..</h1>
+          <h4>Banking makes simple here.</h4>
+          <h4>Get ready to explore..</h4>
+          <br>
+          <a href="{% url 'registration' %}"><button type="button" class="btn btn-success" style="border-radius: 15px; padding-left: 30px; padding-right: 30px;">Get started for free</button></a>  
+        </center>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
       </div>
     </div>
-  </div>
-  <script>
-     function validation(){
-         var status = 1
-         var names=document.getElementById('username')
-         var password=document.getElementById('password')
-            if(names.value == ""){
-                document.getElementById('username').style.borderColor="red"
-                document.getElementById('username_error').innerHTML="please enter your  name in CAPITAL LETTERS"
-                document.getElementById('username_error').style.color="red"
-                document.getElementById('username_error').style.display="block"
-                var status = 0
-            }
-            else{
-                document.getElementById('username_error').style.borderColor="black"
-                document.getElementById('username_error').style.display="none"
-                var status = 1
-            }
-            if(password.value == ""){
-                document.getElementById('password').style.borderColor="red"
-                document.getElementById('password_error').innerHTML="please enter your  name in CAPITAL LETTERS"
-                document.getElementById('password_error').style.color="red"
-                document.getElementById('password_error').style.display="block"
-                var status = 0
-            }
-            else{
-                document.getElementById('password').style.borderColor="black"
-                document.getElementById('password_error').style.display="none"
-                var status = 1
-           }
+    <br>
+   
+      <div class="container-fluid">
+       <div class="row">
+        <div id="div1" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <h3 style="margin-top: 80px; ">XYZ BANK</h3>
+          <P id="para">XYZ bank is a financial institution where customers can save or borrow money. XYZ Bank also invest money to build up their reserve of money. What they do is regulated by laws. Those laws differ in different countries.</P>
 
-           if(status == 1){
-               return true
-           }
-           if(status == 0){
-               return false
-           }
-       }
-  </script>
+        </div>
+
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.ibb.co/TvVKgPg/sc6.jpg" class="d-block w-100 "  alt="...">
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div> -->
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.ibb.co/Wv9mCJB/scheme-2.png" class="d-block w-100" alt="...">
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div> -->
+              </div>
+              <!-- <div class="carousel-item"> -->
+                <!-- <img src="https://i.ibb.co/r2LQQsy/scheme-4.png" class="d-block w-100 " style="height:90%;" alt="..."> -->
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div> -->
+              <!-- </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+        </div>
+        <div id="div2" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <h3 style="margin-top:80PX ;">  <U> CONTACT US </U></h3>
+          <br>
+          <br>
+          <p><i class="fas fa-home mr-3"></i> Calicut, KL 673603, IN</p>
+                          <p><i class="fas fa-envelope mr-3"></i> info@xyzbank.com</p>
+                          <p><i class="fas fa-phone mr-3"></i> + 91 892 345 67</p>
+                          <p><i class="fas fa-print mr-3"></i> + 91 892 345 69</p>
+          
+        </div>
+       </div>
+      </div>
+        
+  
  
 
 

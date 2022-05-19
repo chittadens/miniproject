@@ -9,3 +9,15 @@ class Registration(models.Model):
     
     class Meta:
         db_table='registration'
+
+class Product(models.Model):
+    productname=models.TextField()
+    price=models.IntegerField()
+    description=models.TextField()
+    images=models.ImageField()
+
+    
+    class Meta:
+        db_table='products'
+
+

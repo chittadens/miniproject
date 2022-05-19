@@ -9,13 +9,14 @@ body{
     height: 960px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(135deg, #466a81, #5b4464);
     margin-bottom: 40px !important;
+    /* background-color: #71b7e6; */
 }
 .logo-img a img{
     height: 60px; 
     width: 120px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 .container{

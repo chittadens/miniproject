@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Manager home</title>
-    <link rel="stylesheet" href="{% static 'images/style.css' %}">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <style>
     body{
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn5lUXqVimKG8kWdbUvrEov9AcWnrLTs6Nw&usqp=CAU');
+        background-image: url('https://i.ibb.co/F5N5fFt/manager-home.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -38,7 +38,7 @@
 
 </style>
 <body>
-    <a href="/bankapp/templates/login.html" style="text-decoration: none;"> <h4> logout. </h4></a>
+    <a href="{% url 'login' %}" style="text-decoration: none;"> <h4> logout. </h4></a>
     <h2>     “Banking is necessary, Banks are Not.”</h2>
     <div class="container-fluid">
         <div class="container1" >
@@ -49,19 +49,19 @@
                         <br>
                         <br>
                         <br>
-                        <a href="/bankapp/templates/managerprofiles.html" style="text-decoration: none;"><li>profiles</li></a>
+                        <a href="{% url 'managerprofiles' %}" style="text-decoration: none;"><li>profiles</li></a>
                         <br>
-                        <a href="/bankapp/templates/targets.html" style="text-decoration: none;"><li>targets</li></a>
+                        <a href="{% url 'targets' %}" style="text-decoration: none;"><li>targets</li></a>
                         <br>
-                        <a href="/bankapp/templates/notifications.html" style="text-decoration: none;"> <li>notifications</li></a>
+                        <a href="{% url 'notifications' %}" style="text-decoration: none;"> <li>notifications</li></a>
                         <br>
-                        <a href="/bankapp/templates/managerstaff.html" style="text-decoration: none;"><li>staffs</li></a>
+                        <a href="{% url 'managerstaff' %}" style="text-decoration: none;"><li>staffs</li></a>
                         <br>
-                        <a href="/bankapp/templates/reports.html" style="text-decoration: none;"><li>reports</li></a>
+                        <a href="{% url 'reports' %}" style="text-decoration: none;"><li>reports</li></a>
                         <br>
-                        <a href="/bankapp/templates/schemes.html" style="text-decoration: none;"> <li>schemes</li></a>
+                        <a href="{% url 'schemes' %}" style="text-decoration: none;"> <li>schemes</li></a>
                         <br>
-                        <a href="/bankapp/templates/customers.html" style="text-decoration: none;"><li>customers</li></a>
+                        <a href="{% url 'customers' %}" style="text-decoration: none;"><li>customers</li></a>
                     </ul>
                     </div>
                 </div> 

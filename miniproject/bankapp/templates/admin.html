@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
         body{
-            background-image:url('https://media.istockphoto.com/photos/person-holds-a-smartphone-with-mobile-banking-icons-projection-picture-id1304484797?b=1&k=20&m=1304484797&s=170667a&w=0&h=Z8RFNCQoyUz1lXq9eZK55DuwA8TPRcPcIAJDR7HDjpk=') ;
+            background-image:url('https://i.ibb.co/mX1H6Xv/admin-baground-img.jpg') ;
             background-repeat: no-repeat;
             background-size: cover;
             
@@ -51,7 +53,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-danger">
-        <a class="navbar-brand" href="#"><img src="/bankapp/static/images/logo2.jpg" width="50px" </a>
+        <a class="navbar-brand" href="#"><img src="https://i.ibb.co/TBbjP5z/logo2.jpg" width="50px" </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,23 +64,23 @@
               <a class="nav-link" href="/bankapp/templates/targets.html">TARGETS </a>
             </li> -->
             <li class="nav-item" >
-              <a class="nav-link"  href="/bankapp/templates/targets.html">TARGETS</a>
+              <a class="nav-link"  href="{% url 'targets' %}">TARGETS</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/bankapp/templates/notifications.html">NOTIFICATIONS</a>
+              <a class="nav-link" href="{% url 'notifications' %}">NOTIFICATIONS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bankapp/templates/staffs.html">STAFFS</a>
+              <a class="nav-link" href="{% url 'staffs' %}">STAFFS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bankapp/templates/reports.html">REPORTS</a>
+              <a class="nav-link" href="{% url 'reports' %}">REPORTS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bankapp/templates/schemes.html">SCHEMES</a>
+              <a class="nav-link" href="{% url 'schemes' %}">SCHEMES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bankapp/templates/customers.html">CUSTOMERS</a>
+              <a class="nav-link" href="{% url 'customers' %}">CUSTOMERS</a>
             </li>
             
             
@@ -115,7 +117,7 @@
     
      -->
             <div class="col-xs-8 col-lg-8">
-                <a href="/bankapp/templates/login.html" style="text-decoration: none;"> <h4> logout. </h4></a>
+                <a href="{% url 'login' %}" style="text-decoration: none;"> <h4> logout. </h4></a>
                <h1>Welcome TO The Joy OF Banking....</h1>
              <br>
              <br>

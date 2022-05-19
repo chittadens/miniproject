@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,8 @@
 </head>
 <style>
     body{
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn5lUXqVimKG8kWdbUvrEov9AcWnrLTs6Nw&usqp=CAU');
+        /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn5lUXqVimKG8kWdbUvrEov9AcWnrLTs6Nw&usqp=CAU'); */
+        background-color: rgb(152, 207, 189);
         background-repeat: no-repeat;
         background-size: cover;
         /* margin-top: 20px; */
@@ -77,7 +78,7 @@
         </form>
       </nav> -->
       <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="/bankapp/templates/attendance.html">Attendance</a>
+        <a class="navbar-brand" href="{% url 'attendance' %}">Attendance</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -85,10 +86,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/bankapp/templates/manager.html">Back <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'managerhome' %}">Back <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bankapp/templates/edit.html">Edit</a>
+              <a class="nav-link" href="{% url 'edit' %}">Edit</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -102,7 +103,7 @@
               </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/bankapp/templates/notifications.html">Notifications</a>
+                <a class="nav-link" href="{% url 'notifications' %}">Notifications</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -111,7 +112,7 @@
           </form>
         </div>
       </nav>
-    <a href="/bankapp/templates/login.html" style="text-decoration: none;"> <h4> logout. </h4></a>
+    <a href="{% url 'login' %}" style="text-decoration: none;"> <h4> logout. </h4></a>
     
     <!-- <div class="container-fluid">
         <div class="container1" >
@@ -174,7 +175,7 @@
                         <div class="col-md-4 mt-1">
                           <div class="card text-center sidebar">
                             <div class="card-body">
-                              <img src="/bankapp/static/images/emp2.jpg" class="rounded-circle " width="300">
+                              <img src="https://i.ibb.co/Cns92WF/emp2.jpg" class="rounded-circle " width="300">
                               <div class="mt-3">
 
                              
@@ -183,7 +184,7 @@
                                 <a href="">Work</a>
                                 <a href="">Support</a>
                                 <a href="">Setting</a> -->
-                                <a href="/bankapp/templates/staffhome.html">Signout</a>
+                                <a href="{% url 'staffhome' %}">Signout</a>
                                 
                               </div>
                             </div>

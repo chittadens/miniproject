@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +73,7 @@
 </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" >
-        <a class="navbar-brand" href="/bankapp/templates/admin.html"><img src="/bankapp/static/images/home logo.png" width="50px"></a>
+        <a class="navbar-brand" href="{% url 'admin' %}"><img src="https://i.ibb.co/g9YmTcD/home-logo.png" width="50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -113,28 +113,28 @@
         <div class="team">
           <div class="team_member">
             <div class="team_img">
-              <img src="/bankapp/static/images/emp1.jpg">
+              <img src="https://i.ibb.co/WFdVbtZ/emp1.jpg">
             </div>
           <h3>CLARA MARIA</h3>
-         <a href="/bankapp/templates/adminmanager.html" > <p class="role" > manager </p></a>
+         <a href="{% url 'adminmanager' %}" > <p class="role" > manager </p></a>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam officiis soluta suscipit iusto, quo doloribus incidunt repellendus a distinctio numquam temporibus dolores? Aperiam, quod facere!</p>
 
           </div>
           <div class="team_member">
             <div class="team_img">
-              <img src="/bankapp/static/images/emp2.jpg">
+              <img src="https://i.ibb.co/Cns92WF/emp2.jpg">
             </div>
             <h3>JOHN PAUL</h3>
-            <a href="/bankapp/templates/ad asst ma profile.html" ><p class="role">asst. manager</p></a>
+            <a href="{% url 'ad asst ma profile' %}" ><p class="role">asst. manager</p></a>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam officiis soluta suscipit iusto, quo doloribus incidunt repellendus a distinctio numquam temporibus dolores? Aperiam, quod facere!</p>
   
           </div>
           <div class="team_member">
             <div class="team_img">
-              <img src="/bankapp/static/images/emp3.jpg">
+              <img src="https://i.ibb.co/NF2V9cH/emp3.jpg">
             </div>
             <h3>KARTHIK K.</h3>
-            <a href="/bankapp/templates/admin clerk profile.html" ><p class="role">clerk</p></a>
+            <a href="{% url 'adminclerkprofile' %}" ><p class="role">clerk</p></a>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam officiis soluta suscipit iusto, quo doloribus incidunt repellendus a distinctio numquam temporibus dolores? Aperiam, quod facere!</p>
   
           </div>

@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +11,14 @@
 </head>
 <style>
     body{
-       background-image: url('https://media.istockphoto.com/vectors/finger-scan-on-computer-technology-background-vector-illustration-vector-id1040418354?k=20&m=1040418354&s=612x612&w=0&h=r24FPoUsLa5hk0M2TcRq8-S6Wd8JQx804oIoQpOAf1c=');
+       background-image: url('https://i.ibb.co/ZJnXgDJ/attendance.jpg');
        background-size: cover;
        background-repeat: no-repeat;
     }
 </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/bankapp/templates/admin.html"><img src="/bankapp/static/images/home logo.png" width="60px"> </a>
+        <a class="navbar-brand" href="{% url 'admin' %}"><img src="https://i.ibb.co/g9YmTcD/home-logo.png" width="60px"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
