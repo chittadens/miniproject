@@ -8,6 +8,7 @@
 </head>
 <body>
     <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
         <label>productname</label>
         <input type="text" name="productname">
         <br>
@@ -19,6 +20,8 @@
         <br>
         <label>images</label>
         <input type="file" name="images">
+        <br>
+        <button>submit</button>
     </form>
 </body>
 </html>

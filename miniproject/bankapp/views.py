@@ -1,6 +1,7 @@
+from random import random
 from django.shortcuts import redirect, render
 from . models import *
-
+from django.core.files.storage import FileSystemStorage
 
 def home(request):
      return render(request, 'home.html')
@@ -40,6 +41,10 @@ def forgot(request):
 
 def attendance(request):
     return render(request, 'attendance.html')
+
+
+def attendancenew(request):
+    return render(request, 'attendancenew.html')
 
 
 def registration(request):
@@ -185,6 +190,12 @@ def maamproduct(request):
           price=request.POST['price']
           description=request.POST['description']
           images=request.FILES['images']
+          file_name=str(random()) + images.name
+          images.name = file_name
+          file_object=FileSystemStorage()
+          file_object.save(file_name,images)
+          object_details=Product(productname=productname,price=price,description=description,images=images)
+          object_details.save()
      return render(request,'maamproduct.html')    
 
  
