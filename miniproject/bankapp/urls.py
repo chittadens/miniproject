@@ -41,5 +41,6 @@ urlpatterns = [
     path('ad asst ma profile/',views.adasstmaprofile,name="ad asst ma profile"),
     path('maamprofile/',views.maamprofile,name="maamprofile"),
     path('maamproduct/',views.maamproduct,name="maamproduct"),
+    path('maamshow/',views.maamshow,name="maamshow"),
 
 ]

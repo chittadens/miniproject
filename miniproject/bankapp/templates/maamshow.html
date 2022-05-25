@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>productname</th>
+            <th>price</th>
+            <th>description</th>
+            <th>images</th>
+        </tr>
+         {% for i in product %}
+          <tr>
+            <td> {{ i.productname }} </td>
+            <td> {{ i.price }} </td>
+            <td> {{ i.description }} </td>
+            <td> <img src="/media/{{ i.images }}" width="150px" alt=""></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

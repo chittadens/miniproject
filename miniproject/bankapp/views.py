@@ -196,7 +196,14 @@ def maamproduct(request):
           file_object.save(file_name,images)
           object_details=Product(productname=productname,price=price,description=description,images=images)
           object_details.save()
-     return render(request,'maamproduct.html')    
+     return render(request,'maamproduct.html') 
+
+
+def maamshow(request):
+     product_details= Product.objects.all()
+     return render(request,'maamshow.html.',{'product':product_details})
+
+        
 
  
          
